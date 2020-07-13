@@ -1,2 +1,1 @@
-# app-extreme-budget
 # vytautassugintas
