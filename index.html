@@ -72,9 +72,6 @@
             line-height: 1;
         }
     </style>
-    <script>
-
-    </script>
 </head>
 <body>
     <div class="page_container">
@@ -91,11 +88,29 @@
                 </div>
                 <div>
                     <h1 class="header header__far">Experience</h1>
+                    <div>
+                        <p id="working-at-dibs">asd</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-	<script src="assets/scripts/main.js"></script>
+    <script>
+        (function() {
+            function pluralize(word, count){
+                return `${count} ${count < 1 ? `${word}` : `${word}s`}`
+            }
+
+            const UTC_START = 1970;
+            const startedAtDibs = new Date("2018-07-01");
+            const today = new Date();
+            const dibsDiff = new Date(today.getTime() - startedAtDibs.getTime());
+            const workingAtDibs = `${pluralize('year', dibsDiff.getUTCFullYear() - UTC_START)} ${pluralize('month', dibsDiff.getUTCMonth() + 1)}`
+
+
+                document.getElementById("working-at-dibs").innerText = workingAtDibs;
+        })();
+    </script>
 </body>
 </html>
