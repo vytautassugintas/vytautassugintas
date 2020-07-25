@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title></title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Rasa:wght@400;700&display=swap" rel="stylesheet">
+	<style>
+        html {
+            color: #2c3e50;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .sidebar {
+            font-family: 'Rasa', serif;
+            min-width: 160px;
+            padding: 0 28px;
+        }
+
+        .sidebar--link {
+            font-size: 28px;
+            display: block;
+            text-decoration: underline;
+            margin-bottom: 16px;
+        }
+
+        .sidebar--link:link {
+            color: #2c3e50;
+        }
+
+        .sidebar--link:hover {
+            color: #487eb0;
+        }
+
+        .page_container {
+            margin: 0 auto;
+            padding: 24px 0 ;
+            max-width: 960px;
+        }
+
+        .main_container {
+            margin-left: 28px;
+        }
+
+        .header {
+            font-family: 'Rasa', serif;
+            font-size: 28px;
+        }
+
+        .header__condensed {
+            margin: 0;
+            line-height: 1;
+        }
+
+        .header__far {
+            margin-top: 50px;
+            margin-bottom: 28px;
+        }
+
+        .text {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .text__condensed {
+            margin-bottom: 0;
+            margin-top: 4px;
+            line-height: 1;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div class="page_container">
+        <div class="flex">
+            <div class="sidebar">
+                <a href="#" class="sidebar--link">Me</a>
+                <a href="#" class="sidebar--link">Blog</a>
+                <a href="#" class="sidebar--link">Notes</a>
+            </div>
+            <div class="main_container">
+                <div>
+                    <h1 class="header header__condensed">Vytautas Sugintas</h1>
+                    <p class="text text__condensed">Front End Engineer at 1stdibs</p>
+                </div>
+                <div>
+                    <h1 class="header header__far">Experience</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script src="assets/scripts/main.js"></script>
+</body>
+</html>
