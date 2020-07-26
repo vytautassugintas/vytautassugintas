@@ -5,7 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
-	<title></title>
+    <title></title>
+    <script src="https://kit.fontawesome.com/ca466b51b9.js" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Rasa:wght@400;700&display=swap" rel="stylesheet">
 	<style>
         html {
@@ -14,6 +15,22 @@
 
         .flex {
             display: flex;
+        }
+
+        .spacer-md {
+            margin: 25px 0;
+        }
+
+        a:link {
+            color: #2c3e50;
+        }
+
+        a:visited {
+            color: #2c3e50;
+        }
+
+        a:hover {
+            color: #487eb0;
         }
 
         .sidebar {
@@ -27,14 +44,6 @@
             display: block;
             text-decoration: underline;
             margin-bottom: 16px;
-        }
-
-        .sidebar--link:link {
-            color: #2c3e50;
-        }
-
-        .sidebar--link:hover {
-            color: #487eb0;
         }
 
         .page_container {
@@ -59,17 +68,40 @@
 
         .header__far {
             margin-top: 50px;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
         }
 
         .text {
             font-family: 'Open Sans', sans-serif;
         }
 
+        .info-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .info-container > i {
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
         .text__condensed {
+            font-size: 18px;
             margin-bottom: 0;
             margin-top: 4px;
             line-height: 1;
+        }
+
+        .job--title {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .job--timeline {
+            font-size: 14px;
+            margin-top: 4px;
+            margin-bottom: 24px;
         }
     </style>
 </head>
@@ -78,6 +110,7 @@
         <div class="flex">
             <div class="sidebar">
                 <a href="#" class="sidebar--link">Me</a>
+                <a href="#" class="sidebar--link">Projects</a>
                 <a href="#" class="sidebar--link">Blog</a>
                 <a href="#" class="sidebar--link">Notes</a>
             </div>
@@ -85,6 +118,11 @@
                 <div>
                     <h1 class="header header__condensed">Vytautas Sugintas</h1>
                     <p class="text text__condensed">Front End Engineer at 1stdibs</p>
+                </div>
+
+                <div class="spacer-md">
+                    <div class="info-container text"><i class="fas fa-location-arrow"></i><a href="https://www.google.com/maps/place/Vilnius/">Vilnius, Lithuania</a></div>
+                    <div class="info-container text"><i class="fab fa-github"></i><a href="https://github.com/vytautassugintas">vytautassugintas</a></div>
                 </div>
                 <div>
                     <h1 class="header header__far">Experience</h1>
@@ -97,17 +135,13 @@
 
     <script>
         (function() {
+            const UTC_START = 1970;
+            const SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const TODAY = new Date();
+
             function pluralize(word, count){
                 return `${count} ${count < 2 ? `${word}` : `${word}s`}`
             }
-
-            const UTC_START = 1970;
-            const SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            const startedAtDibs = new Date("2018-07-01");
-            const today = new Date();
-            const dibsDiff = new Date(today.getTime() - startedAtDibs.getTime());
-            const workingAtDibs = 
-                `${pluralize('year', dibsDiff.getUTCFullYear() - UTC_START)} ${pluralize('month', dibsDiff.getUTCMonth() + 1)}`
 
             const experience = [
                 {
@@ -124,15 +158,15 @@
             ];
 
             const experienceContent = experience.map(job => {
-                const dateDiff = new Date((!!job.ended ? job.ended.getTime() : today.getTime()) - job.started.getTime());
+                const dateDiff = new Date((!!job.ended ? job.ended.getTime() : TODAY.getTime()) - job.started.getTime());
                 const started = `${SHORT_MONTHS[job.started.getMonth()]} ${job.started.getUTCFullYear()}`;
                 const ended = `${!!job.ended ? `${SHORT_MONTHS[job.ended.getMonth()]} ${job.ended.getUTCFullYear()}` : `Present` }`;
                 const wokedFor = `${pluralize('year', dateDiff.getUTCFullYear() - UTC_START)} ${pluralize('month', dateDiff.getUTCMonth() + 1)}`
 
                 return `
                     <div>
-                        <p>${job.title} at ${job.company}</p>
-                        <p>${started} - ${ended} | ${wokedFor}</p>
+                        <p class="text job--title">${job.title} at ${job.company}</p>
+                        <p class="text job--timeline">${started} - ${ended} | ${wokedFor}</p>
                     </div>
                 `
             }).join('\n');
