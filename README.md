@@ -1,3 +1,7 @@
-### Hello there
-
-<img width="200" src="https://media.giphy.com/media/26AHG5KGFxSkUWw1i/giphy.gif" />
+<div align="center">
+	<br>
+	<a href="https://github.com/vytautassugintas/vytautassugintas/blame/master/header.svg">
+		<img src="header.svg" width="800" height="400">
+	</a>
+	<br>
+</div>
