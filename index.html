@@ -53,11 +53,17 @@
             padding: 0 28px;
         }
 
-        .sidebar--link {
+        .sidebar__link {
             font-size: 28px;
             display: block;
             text-decoration: underline;
             margin-bottom: 16px;
+        }
+
+        .sidebar__link--disabled, .sidebar__link--disabled:visited, .sidebar__link--disabled:hover {
+            cursor: default;
+            color: #b2bec3;
+            text-decoration: none;
         }
 
         .page-container {
@@ -132,10 +138,10 @@
     <div class="page-container">
         <div class="flex">
             <div class="sidebar">
-                <a href="#" class="sidebar--link">Me</a>
-                <a href="#" class="sidebar--link">Projects</a>
-                <a href="#" class="sidebar--link">Blog</a>
-                <a href="#" class="sidebar--link">Notes</a>
+                <a href="#" class="sidebar__link">Me</a>
+                <a class="sidebar__link--disabled sidebar__link">Projects</a>
+                <a class="sidebar__link--disabled sidebar__link">Blog</a>
+                <a class="sidebar__link--disabled sidebar__link">Notes</a>
             </div>
             <div class="main_container">
                 <div>
