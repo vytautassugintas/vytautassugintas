@@ -54,14 +54,54 @@ a:hover {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 667px) {
+    .sidebar {
+        display: flex;
+        min-width: auto;
+        justify-content: space-between;
+        background-color: #ecf0f1;
+        padding: 20px;
+        margin-bottom: 16px;
+    }
+
+    .sidebar__link {
+        margin: 0;
+        padding: 0;
+    }
+}
+
 .page-container {
+    display: flex;
     margin: 0 auto;
     padding: 24px 0;
     max-width: 960px;
 }
 
+@media only screen and (max-width: 667px) {
+    .page-container {
+        padding: 0;
+    }
+}
+
+.page__layout {
+    display: flex;
+}
+
+@media only screen and (max-width: 667px) {
+    .page__layout {
+        width: 100vw;
+        display: block;
+    }
+}
+
 .main_container {
     margin-left: 28px;
+}
+
+@media only screen and (max-width: 667px) {
+    .main_container {
+        margin-left: 20px;
+    }
 }
 
 .header {
