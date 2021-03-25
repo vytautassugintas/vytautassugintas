@@ -1,207 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
-    <title>Vytautas Sugintas | Front End Engineer</title>
-    
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Rasa:wght@400;700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Rasa:wght@400;700&display=swap" media="print" onload="this.media='all'" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<style>
-        html {
-            color: #2c3e50;
-            padding: 0;
-            margin: 0;
-        }
+        <title>Vytautas Sugintas | Front End Engineer</title>
 
-        body {
-            padding: 0;
-            margin: 0;
-        }
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        .flex {
-            display: flex;
-        }
+        <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Rasa:wght@400;700&display=swap"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Rasa:wght@400;700&display=swap"
+            media="print"
+            onload="this.media='all'"
+        />
 
-        .spacer-sm {
-            margin: 10px 0;
-        }
-
-        .spacer-md {
-            margin: 25px 0;
-        }
-
-        a:link {
-            color: #2c3e50;
-        }
-
-        a:visited {
-            color: #2c3e50;
-        }
-
-        a:hover {
-            color: #487eb0;
-        }
-
-        .sidebar {
-            font-family: 'Rasa', serif;
-            min-width: 160px;
-            padding: 0 28px;
-        }
-
-        .sidebar__link {
-            font-size: 28px;
-            display: block;
-            text-decoration: underline;
-            margin-bottom: 16px;
-        }
-
-        .sidebar__link--disabled, .sidebar__link--disabled:visited, .sidebar__link--disabled:hover {
-            cursor: default;
-            color: #b2bec3;
-            text-decoration: none;
-        }
-
-        .page-container {
-            margin: 0 auto;
-            padding: 24px 0 ;
-            max-width: 960px;
-        }
-
-        .main_container {
-            margin-left: 28px;
-        }
-
-        .header {
-            font-family: 'Rasa', serif;
-            font-size: 28px;
-        }
-
-        .header__condensed {
-            margin: 0;
-            line-height: 1;
-        }
-
-        .header__far {
-            margin-top: 50px;
-            margin-bottom: 24px;
-        }
-
-        .text {
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        .info-container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-
-        .info-container > i {
-            font-size: 20px;
-            margin-right: 8px;
-        }
-
-        .text__condensed {
-            font-size: 18px;
-            margin-bottom: 0;
-            margin-top: 4px;
-            line-height: 1;
-        }
-
-        .job--title {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .job--timeline {
-            font-size: 14px;
-            margin-top: 4px;
-            margin-bottom: 24px;
-        }
-
-        .wip-container {
-            background: #e74c3c;
-            color: #f3f3f3;
-            min-height: 38px;
-            padding-top: 14px;
-            text-align: center;
-        }
-    </style>
-</head>
-<div class="text wip-container">Work in progress, come back later</div>
-<body>
-    <div class="page-container">
-        <div class="flex">
-            <div class="sidebar">
-                <a href="#" class="sidebar__link">Me</a>
-                <a class="sidebar__link--disabled sidebar__link">Projects</a>
-                <a class="sidebar__link--disabled sidebar__link">Blog</a>
-                <a class="sidebar__link--disabled sidebar__link">Notes</a>
-            </div>
-            <div class="main_container">
-                <div>
-                    <h1 class="header header__condensed">Vytautas Sugintas</h1>
-                    <p class="text text__condensed">Front End Engineer at 1stdibs</p>
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <div class="text wip-container">Work in progress, come back later</div>
+    <body>
+        <div class="page-container">
+            <div class="flex">
+                <div class="sidebar">
+                    <a href="#" class="sidebar__link">Me</a>
+                    <a class="sidebar__link--disabled sidebar__link">Projects</a>
+                    <a class="sidebar__link--disabled sidebar__link">Blog</a>
+                    <a class="sidebar__link--disabled sidebar__link">Notes</a>
                 </div>
-                <div class="spacer-md">
-                    <div class="text spacer-sm">I'm from <a href="https://www.google.com/maps/place/Vilnius/">Vilnius, Lithuania</a></div>
-                    <div class="text spacer-sm">My GitHub account is <a href="https://github.com/vytautassugintas">vytautassugintas</a></div>
-                </div>
-                <div>
-                    <h1 class="header header__far">Experience</h1>
-                    <div id="experience-container">
-                        <!-- exp goes here -->
+                <div class="main_container">
+                    <div>
+                        <h1 class="header header__condensed">Vytautas Sugintas</h1>
+                        <p class="text text__condensed">Front End Engineer at 1stdibs</p>
+                    </div>
+                    <div class="spacer-md">
+                        <div class="text spacer-sm">
+                            I'm from
+                            <a href="https://www.google.com/maps/place/Vilnius/"
+                                >Vilnius, Lithuania</a
+                            >
+                        </div>
+                        <div class="text spacer-sm">
+                            My GitHub account is
+                            <a href="https://github.com/vytautassugintas">vytautassugintas</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="header header__far">Experience</h1>
+                        <div id="experience-container">
+                            <!-- exp goes here -->
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        (function() {
-            const UTC_START = 1970;
-            const SHORT_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            const TODAY = new Date();
+        <script>
+            (function () {
+                const UTC_START = 1970;
+                const SHORT_MONTHS = [
+                    'Jan',
+                    'Feb',
+                    'Mar',
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec',
+                ];
+                const TODAY = new Date();
 
-            function pluralize(word, count){
-                return `${count} ${count < 2 ? `${word}` : `${word}s`}`
-            }
-
-            const experience = [
-                {
-                    title: "Front End Engineer",
-                    company: "1stdibs",
-                    started: new Date("2018-07-01"),
-                },
-                {
-                    title: "Front End Engineer",
-                    company: "Swedbank",
-                    started: new Date("2016-04-01"),
-                    ended: new Date("2018-07-01"),
+                function pluralize(word, count) {
+                    return `${count} ${count < 2 ? `${word}` : `${word}s`}`;
                 }
-            ];
 
-            const experienceContent = experience.map(job => {
-                const dateDiff = new Date((!!job.ended ? job.ended.getTime() : TODAY.getTime()) - job.started.getTime());
-                const started = `${SHORT_MONTHS[job.started.getMonth()]} ${job.started.getUTCFullYear()}`;
-                const ended = `${!!job.ended ? `${SHORT_MONTHS[job.ended.getMonth()]} ${job.ended.getUTCFullYear()}` : `Present` }`;
-                const wokedFor = `${pluralize('year', dateDiff.getUTCFullYear() - UTC_START)} ${pluralize('month', dateDiff.getUTCMonth() + 1)}`
+                const experience = [
+                    {
+                        title: 'Front End Engineer',
+                        company: '1stdibs',
+                        started: new Date('2018-07-01'),
+                    },
+                    {
+                        title: 'Front End Engineer',
+                        company: 'Swedbank',
+                        started: new Date('2016-04-01'),
+                        ended: new Date('2018-07-01'),
+                    },
+                ];
 
-                return `
+                const experienceContent = experience
+                    .map(job => {
+                        const dateDiff = new Date(
+                            (!!job.ended ? job.ended.getTime() : TODAY.getTime()) -
+                                job.started.getTime()
+                        );
+                        const started = `${
+                            SHORT_MONTHS[job.started.getMonth()]
+                        } ${job.started.getUTCFullYear()}`;
+                        const ended = `${
+                            !!job.ended
+                                ? `${
+                                      SHORT_MONTHS[job.ended.getMonth()]
+                                  } ${job.ended.getUTCFullYear()}`
+                                : `Present`
+                        }`;
+                        const wokedFor = `${pluralize(
+                            'year',
+                            dateDiff.getUTCFullYear() - UTC_START
+                        )} ${pluralize('month', dateDiff.getUTCMonth() + 1)}`;
+
+                        return `
                     <div>
                         <p class="text job--title">${job.title} at ${job.company}</p>
                         <p class="text job--timeline">${started} - ${ended} | ${wokedFor}</p>
                     </div>
-                `
-            }).join('\n');
+                `;
+                    })
+                    .join('\n');
 
-            document.getElementById("experience-container").innerHTML = experienceContent;
-        })();
-    </script>
-</body>
+                document.getElementById('experience-container').innerHTML = experienceContent;
+            })();
+        </script>
+    </body>
 </html>
