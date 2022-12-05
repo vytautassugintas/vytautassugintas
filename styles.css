@@ -1,3 +1,7 @@
+:root {
+    --font: Verdana, sans-serif;
+}
+
 html {
     color: #2c3e50;
     padding: 0;
@@ -34,7 +38,7 @@ a:hover {
 }
 
 .sidebar {
-    font-family: 'Rasa', serif;
+    font-family: var(--font);
     min-width: 160px;
     padding: 0 28px;
 }
@@ -105,7 +109,7 @@ a:hover {
 }
 
 .header {
-    font-family: 'Rasa', serif;
+    font-family: var(--font);
     font-size: 28px;
 }
 
@@ -120,7 +124,7 @@ a:hover {
 }
 
 .text {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font);
 }
 
 .info-container {
