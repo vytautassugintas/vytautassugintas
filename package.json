@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/vytautassugintas/vytautassugintas/issues"
   },
-  "homepage": "https://www.vytautas.xyz"
+  "homepage": "https://www.vytautas.xyz",
+  "dependencies": {
+    "marked": "^12.0.1"
+  }
 }
