@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Vytautas Sugintas | Front End Engineer</title>
+        
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <div class="text wip-container">Work in progress, come back later</div>
+    <body>
+        <div class="page-container">
+            <div class="page__layout">
+                <div class="sidebar">
+                    <a href="index.html" class="sidebar__link">Me</a>
+                    <a class="sidebar__link--disabled sidebar__link">Projects</a>
+                    <a class="sidebar__link--disabled sidebar__link">Blog</a>
+                    <a href="notes.html" class="sidebar__link">Notes</a>
+                </div>
+                <div class="main_container">
+                    <div>
+                        <h2 class="header">Array of objects in FormData</h2>
+                        <p class="text">When <code>JSON.stringify()</code> is not enough. This is a workaround to pass array of objects in <code>FormData</code> for C# backends.</p>
+                        <div>
+                            <pre>
+                                <code>
+const formData = new FormData();
+
+const customFields = [
+    {
+        id: 1,
+        value: {
+            value: 'value1'
+        }
+    },
+    {
+        id: 2,
+        value: {
+            value: 'value2'
+        }
+    },
+];
+
+customFields.forEach((field, index) => {
+    formData.append(`customFields[${index}].id`, field.id);
+    formData.append(`customFields[${index}].value.value`, field.value.value);
+});
+                                </code>
+                            </pre>
+
+                            <p class="text">This will result in the following <code>FormData</code> object:</p>
+                            <pre>
+                                <code>
+FormData {
+    'customFields[0].id': 1
+    'customFields[0].value.value': 'value1'
+    'customFields[1].id': 2
+    'customFields[1].value.value': 'value2'
+}
+                                </code>
+                            </pre>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./index.js"></script>
+    </body>
+    
+</html>
